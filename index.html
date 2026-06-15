@@ -1653,14 +1653,14 @@ html, body {
 
       <!-- Venn: two overlapping circles, intersection labelled EXCHANGE -->
       <!--
-        Container 940px wide. Circles 460px each.
+        Container 940px wide, centred via margin:auto.
         Left circle  at left:0   → x 0..460
         Right circle at left:320 → x 320..780
         Overlap 140px, overlap centre x=390px
         NEED centre  x=160 (midpoint 0..320)
-        SOLUTION centre x=550 (midpoint 460..780)
+        SOLUTION centre x=620 (midpoint 320+460/2=550 → right circle centre)
       -->
-      <div style="position:relative; width:940px; height:500px; flex-shrink:0;">
+      <div style="position:relative; width:940px; height:500px; flex-shrink:0; margin:0 auto;">
 
         <!-- Left circle -->
         <div style="
@@ -1688,7 +1688,7 @@ html, body {
 
         <!-- SOLUTION label -->
         <div style="
-          position:absolute; left:620px; top:50%; transform:translate(-50%,-50%);
+          position:absolute; left:550px; top:50%; transform:translate(-50%,-50%);
           font-family:var(--display); font-weight:900; font-size:44px;
           letter-spacing:-1px; color:var(--text); text-align:center;
           pointer-events:none;
@@ -1820,11 +1820,12 @@ html, body {
           <div style="
             width:320px; height:320px; border-radius:50%;
             border:3px solid var(--gold);
-            background:rgba(242,193,78,.04);
+            background:var(--surface);
             display:flex; align-items:center; justify-content:center;
-            font-family:var(--display); font-weight:900; font-size:44px;
-            letter-spacing:-1px; color:var(--gold); text-align:center; line-height:1.2;
-          ">RELATION&shy;SHIPS</div>
+            font-family:var(--display); font-weight:900; font-size:36px;
+            letter-spacing:-0.5px; color:var(--soft); text-align:center; line-height:1;
+            hyphens:none; overflow-wrap:normal; word-break:keep-all;
+          ">RELATIONSHIPS</div>
         </div>
 
       </div>
@@ -1864,9 +1865,9 @@ html, body {
       <!-- Row of 2 — combination types, gold-accented -->
       <div style="display:flex; gap:28px; align-items:center; justify-content:center;">
 
-        <div style="width:194px; height:194px; border-radius:50%; border:2.5px solid var(--gold); background:rgba(242,193,78,.05); display:flex; align-items:center; justify-content:center; flex-shrink:0;"><div style="font-family:var(--display); font-weight:800; font-size:19px; letter-spacing:1px; color:var(--text); text-align:center; text-transform:uppercase; line-height:1.5;">THIS<br><span style="color:var(--gold);">&ldquo;AND&rdquo;</span><br>THAT</div></div>
+        <div style="width:194px; height:194px; border-radius:50%; border:2.5px solid var(--gold); background:var(--surface); display:flex; align-items:center; justify-content:center; flex-shrink:0;"><div style="font-family:var(--display); font-weight:800; font-size:19px; letter-spacing:1px; color:var(--soft); text-align:center; text-transform:uppercase; line-height:1.5;">THIS<br>&ldquo;AND&rdquo;<br>THAT</div></div>
 
-        <div style="width:194px; height:194px; border-radius:50%; border:2.5px solid var(--gold); background:rgba(242,193,78,.05); display:flex; align-items:center; justify-content:center; flex-shrink:0;"><div style="font-family:var(--display); font-weight:800; font-size:19px; letter-spacing:1px; color:var(--text); text-align:center; text-transform:uppercase; line-height:1.5;">THIS<br><span style="color:var(--gold);">&ldquo;THROUGH&rdquo;</span><br>THAT</div></div>
+        <div style="width:194px; height:194px; border-radius:50%; border:2.5px solid var(--gold); background:var(--surface); display:flex; align-items:center; justify-content:center; flex-shrink:0;"><div style="font-family:var(--display); font-weight:800; font-size:19px; letter-spacing:1px; color:var(--soft); text-align:center; text-transform:uppercase; line-height:1.5;">THIS<br>&ldquo;THROUGH&rdquo;<br>THAT</div></div>
 
       </div>
 
@@ -1886,14 +1887,14 @@ html, body {
 
       <!-- Venn: PAINS / PERSONALITY / AVATAR — same geometry as slide 2 -->
       <!--
-        Container 940px wide. Circles 460px each.
+        Container 940px wide, centred via margin:auto.
         Left circle  at left:0   → x 0..460
         Right circle at left:320 → x 320..780
         Overlap 140px, overlap centre x=390px
         PAINS centre    x=160
-        PERSONALITY centre x=620
+        PERSONALITY centre x=550 (right circle centre)
       -->
-      <div style="position:relative; width:940px; height:500px; flex-shrink:0;">
+      <div style="position:relative; width:940px; height:500px; flex-shrink:0; margin:0 auto;">
 
         <!-- Left circle -->
         <div style="
@@ -1921,11 +1922,12 @@ html, body {
 
         <!-- PERSONALITY label -->
         <div style="
-          position:absolute; left:620px; top:50%; transform:translate(-50%,-50%);
-          font-family:var(--display); font-weight:900; font-size:42px;
-          letter-spacing:-1px; color:var(--text); text-align:center; line-height:1.2;
-          pointer-events:none;
-        ">PERSON-<br>ALITY</div>
+          position:absolute; left:550px; top:50%; transform:translate(-50%,-50%);
+          font-family:var(--display); font-weight:900; font-size:34px;
+          letter-spacing:-0.5px; color:var(--text); text-align:center; line-height:1;
+          pointer-events:none; white-space:nowrap;
+          hyphens:none; overflow-wrap:normal; word-break:keep-all;
+        ">PERSONALITY</div>
 
         <!-- AVATAR label — vertical in overlap -->
         <div style="
